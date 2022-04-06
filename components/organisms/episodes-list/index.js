@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
-import ArticleItem from "components/molecules/article-item";
+import Episode from "components/molecules/episode";
 
 import { Styles } from "./styles";
 
@@ -20,7 +20,7 @@ const EpisodesList = () => {
       <div className="articles__cards">
         {data.map(({ title, writers, desc, originalAirDate }, index) => (
           <div key={index} className="articles__card">
-            <ArticleItem
+            <Episode
               title={title}
               writers={writers}
               desc={desc}

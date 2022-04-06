@@ -4,7 +4,7 @@ export const Styles = styled.div`
   height: 100%;
   width: 100%;
 
-  .article__item {
+  .episode__item {
     height: 100%;
     width: 100%;
     position: relative;
@@ -14,11 +14,11 @@ export const Styles = styled.div`
       box-shadow: 0 0 1rem rgb(0, 0, 0, 0.2);
     }
 
-    .article__image {
+    .episode__image {
       height: 100%;
     }
 
-    .article__info {
+    .episode__info {
       color: var(--gray-dark);
 
       position: absolute;
@@ -31,7 +31,7 @@ export const Styles = styled.div`
       overflow: hidden;
       transition: text-align 0.25s ease;
 
-      .article__title {
+      .episode__title {
         font-weight: bold;
         margin-bottom: 0.25rem;
         font-size: 0.875rem;
@@ -39,19 +39,19 @@ export const Styles = styled.div`
         text-transform: uppercase;
       }
 
-      .article__summary {
+      .episode__summary {
         font-size: 0.7rem;
         color: var(--gray-15);
         text-transform: uppercase;
         transition: max-height 0.25s ease;
       }
 
-      .article__des {
+      .episode__des {
         max-height: 0;
         overflow: hidden;
       }
 
-      .article__actions {
+      .episode__actions {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.25s ease;
@@ -96,20 +96,20 @@ export const Styles = styled.div`
       }
     }
 
-    &:hover .article__info {
+    &:hover .episode__info {
       text-align: center;
     }
 
-    &:hover .article__summary {
+    &:hover .episode__summary {
       max-height: 0;
       overflow: hidden;
     }
 
-    &:hover .article__actions {
+    &:hover .episode__actions {
       max-height: 7.5rem;
     }
 
-    &:hover .article__des {
+    &:hover .episode__des {
       max-height: 2.75rem;
     }
   }
