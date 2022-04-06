@@ -38,7 +38,9 @@ const Episode = ({ title, writers, desc, originalAirDate }) => {
       </div>
 
       <Popup showed={popupShowed} onTaggle={handleTogglePopup}>
-        <ReactPlayer url="https://youtu.be/ScMzIvxBSi4" width="100%" height="100vh" />
+        {popupShowed && (
+          <ReactPlayer url="https://youtu.be/ScMzIvxBSi4" width="90%" height="100vh" />
+        )}
       </Popup>
     </Styles>
   );

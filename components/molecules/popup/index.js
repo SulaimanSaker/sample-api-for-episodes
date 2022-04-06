@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import classNames from "classnames";
 
-import XButton from "components/atoms/button";
+import XButton from "components/atoms/x-button";
 
 import { Styles } from "./styles";
 
