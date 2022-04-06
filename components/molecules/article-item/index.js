@@ -4,11 +4,11 @@ import Popup from "components/molecules/popup";
 
 import ReactPlayer from "react-player/lazy";
 
-import { Button } from "components/atoms";
+import Button from "components/atoms/button";
 
 import { Styles } from "./styles";
 
-const ArticleItem = ({ property1, property2, property3, originalAirDate, src }) => {
+const ArticleItem = ({ title, writers, desc, originalAirDate }) => {
   const [popupShowed, togglePopup] = useState(false);
 
   const handleTogglePopup = () => {
@@ -19,13 +19,13 @@ const ArticleItem = ({ property1, property2, property3, originalAirDate, src }) 
     <Styles>
       <div className="article__item">
         <div className="article__info">
-          <div className="article__title">{property1}</div>
+          <div className="article__title">{title}</div>
 
-          <div className="article__summary">{property2}</div>
+          <div className="article__summary">{writers}</div>
 
-          <div className="article__des">{property3}</div>
+          <div className="article__des">{desc}...</div>
 
-          {originalAirDate}
+          <div className="article__des">{originalAirDate}</div>
 
           <div className="article__actions">
             <div className="button-container">
@@ -38,7 +38,7 @@ const ArticleItem = ({ property1, property2, property3, originalAirDate, src }) 
       </div>
 
       <Popup showed={popupShowed} onTaggle={handleTogglePopup}>
-        <ReactPlayer url={src} width="50%" height="21rem" />
+        <ReactPlayer url="https://youtu.be/ScMzIvxBSi4" width="100%" height="100vh" />
       </Popup>
     </Styles>
   );

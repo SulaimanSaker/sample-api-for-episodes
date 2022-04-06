@@ -21,11 +21,10 @@ const EpisodesList = () => {
         {data.map(({ title, writers, desc, originalAirDate }, index) => (
           <div key={index} className="articles__card">
             <ArticleItem
-              property1={title}
-              property2={writers}
-              property3={desc}
+              title={title}
+              writers={writers}
+              desc={desc}
               originalAirDate={originalAirDate}
-              src="https://youtu.be/ScMzIvxBSi4"
             />
           </div>
         ))}
