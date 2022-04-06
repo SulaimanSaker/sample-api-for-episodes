@@ -4,6 +4,8 @@ export const Styles = styled.div`
   height: 100%;
   width: 100%;
 
+  margin-top: 0.5rem;
+
   .episode__item {
     height: 100%;
     width: 100%;
@@ -14,14 +16,9 @@ export const Styles = styled.div`
       box-shadow: 0 0 1rem rgb(0, 0, 0, 0.2);
     }
 
-    .episode__image {
-      height: 100%;
-    }
-
     .episode__info {
       color: var(--gray-dark);
 
-      position: absolute;
       bottom: 0;
       width: 100%;
       background: white;
@@ -57,39 +54,6 @@ export const Styles = styled.div`
         transition: max-height 0.25s ease;
       }
 
-      .icons-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.65rem;
-        margin-bottom: 1.05rem;
-        text-align: center;
-
-        button {
-          border: none;
-        }
-
-        .heart {
-          padding: 0.5rem;
-          background-color: white;
-          border-radius: 100%;
-          margin-right: 0.6rem;
-          cursor: pointer;
-          width: 2.5rem;
-          height: 2.5rem;
-          background-color: var(--gray-11);
-        }
-
-        .bookmark {
-          padding: 0.5rem;
-          background-color: white;
-          border-radius: 100%;
-          cursor: pointer;
-          width: 2.5rem;
-          height: 2.5rem;
-          background-color: var(--gray-11);
-        }
-      }
-
       .button-container {
         text-align: center;
         margin-bottom: 1rem;
@@ -101,16 +65,16 @@ export const Styles = styled.div`
     }
 
     &:hover .episode__summary {
-      max-height: 0;
+      max-height: 5rem;
       overflow: hidden;
     }
 
     &:hover .episode__actions {
-      max-height: 7.5rem;
+      max-height: 12rem;
     }
 
     &:hover .episode__des {
-      max-height: 2.75rem;
+      max-height: 12rem;
     }
   }
 `;

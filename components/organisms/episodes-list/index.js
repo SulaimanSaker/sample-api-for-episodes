@@ -17,9 +17,9 @@ const EpisodesList = () => {
 
   return (
     <Styles>
-      <div className="articles__cards">
+      <div className="episode__cards">
         {data.map(({ title, writers, desc, originalAirDate }, index) => (
-          <div key={index} className="articles__card">
+          <div key={index} className="episode__card">
             <Episode
               title={title}
               writers={writers}

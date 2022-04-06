@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Styles = styled.div`
-  .articles__ads {
+  .episode__ads {
     width: 100%;
     .wrapper {
       width: 100%;
     }
   }
-  .articles__cards {
+  .episode__cards {
     display: grid;
     grid-template-columns: ${({ filtersCollapsed }) =>
       filtersCollapsed ? "repeat(3, 1fr)" : "repeat(4, 1fr)"};
@@ -22,7 +22,7 @@ export const Styles = styled.div`
   }
 
   @media (max-width: 960px) {
-    .articles__cards {
+    .episode__cards {
       grid-template-columns: repeat(4, 1fr);
       row-gap: 1.5rem;
       column-gap: 1rem;
@@ -30,19 +30,19 @@ export const Styles = styled.div`
   }
 
   @media (max-width: 768px) {
-    .articles__cards {
+    .episode__cards {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
   @media (max-width: 414px) {
-    .articles__cards {
+    .episode__cards {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (max-width: 375px) {
-    .articles__cards {
+    .episode__cards {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 1.75rem;
       grid-auto-rows: 22.5rem;
