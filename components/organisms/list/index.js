@@ -6,7 +6,7 @@ import { ArticleItem } from "components/molecules";
 
 import { Styles } from "./styles";
 
-const ArticlesList = () => {
+const List = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -37,4 +37,4 @@ const ArticlesList = () => {
   );
 };
 
-export default ArticlesList;
+export default List;

@@ -31,7 +31,7 @@ export { default as ItemsList } from "./items-list";
 export { default as ListFilterBar } from "./list-filter-bar";
 export { default as ListFilters } from "./list-filters";
 export { default as ListHeader } from "./list-header";
-export { default as ArticlesList } from "./articles-list";
+export { default as EpisodesList } from "./list";
 export { default as ShoppingCartItemsList } from "./shopping-cart-items-list";
 export { default as ShoppingCartSummary } from "./shopping-cart-summary";
 export { default as ShoppingCartTabs } from "./shopping-cart-tabs";
