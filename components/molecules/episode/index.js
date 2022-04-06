@@ -29,7 +29,7 @@ const Episode = ({ title, writers, desc, originalAirDate }) => {
 
           <div className="episode__actions">
             <div className="button-container">
-              <Button primary rounded onClick={handleTogglePopup}>
+              <Button primary rounded className="mt-2" onClick={handleTogglePopup}>
                 Watch the Video
               </Button>
             </div>
