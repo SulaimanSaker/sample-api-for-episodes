@@ -6,11 +6,13 @@ import Episode from "components/molecules/episode";
 
 import { Styles } from "./styles";
 
+const url = "https://api.sampleapis.com/futurama/episodes";
+
 const EpisodesList = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("https://api.sampleapis.com/futurama/episodes").then((res) => {
+    axios.get(url).then((res) => {
       setData(res.data);
     });
   }, []);
