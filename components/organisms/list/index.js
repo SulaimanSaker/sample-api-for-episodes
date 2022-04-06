@@ -15,8 +15,6 @@ const List = () => {
     });
   }, []);
 
-  console.log("test", "data", data);
-
   return (
     <Styles>
       <div className="articles__cards">
