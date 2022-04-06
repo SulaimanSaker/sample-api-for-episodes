@@ -10,7 +10,7 @@ import EpisodesList from "components/organisms/episodes-list";
 
 export const Styles = styled.div``;
 
-const ArticlesPage = () => {
+const HomePage = () => {
   return (
     <AppTemplate>
       <Head>
@@ -28,4 +28,4 @@ const ArticlesPage = () => {
   );
 };
 
-export default ArticlesPage;
+export default HomePage;
