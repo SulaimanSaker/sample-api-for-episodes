@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
-import { ArticleItem } from "components/molecules";
+import ArticleItem from "components/molecules/article-item";
 
 import { Styles } from "./styles";
 
-const List = () => {
+const EpisodesList = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -18,10 +18,9 @@ const List = () => {
   return (
     <Styles>
       <div className="articles__cards">
-        {data.map(({ id, title, writers, desc, originalAirDate }, index) => (
+        {data.map(({ title, writers, desc, originalAirDate }, index) => (
           <div key={index} className="articles__card">
             <ArticleItem
-              id={id}
               property1={title}
               property2={writers}
               property3={desc}
@@ -35,4 +34,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default EpisodesList;

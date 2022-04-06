@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import AppTemplate from "components/templates/app";
 
-import { EpisodesList } from "components/organisms";
+import EpisodesList from "components/organisms/episodes-list";
 
 export const Styles = styled.div``;
 

@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 
-import { useRouter } from "next/router";
-
-import { Popup } from "components/molecules";
+import Popup from "components/molecules/popup";
 
 import ReactPlayer from "react-player/lazy";
 
 import { Button } from "components/atoms";
 
 import { Styles } from "./styles";
-import New from "components/atoms/New";
 
-const ArticleItem = ({ id, property1, property2, property3, isNew, originalAirDate, src }) => {
-  const router = useRouter();
-
+const ArticleItem = ({ property1, property2, property3, originalAirDate, src }) => {
   const [popupShowed, togglePopup] = useState(false);
 
   const handleTogglePopup = () => {
@@ -40,8 +35,6 @@ const ArticleItem = ({ id, property1, property2, property3, isNew, originalAirDa
             </div>
           </div>
         </div>
-
-        {isNew && <New />}
       </div>
 
       <Popup showed={popupShowed} onTaggle={handleTogglePopup}>
