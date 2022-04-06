@@ -1,0 +1,47 @@
+/* custom-bootstrap.scss */
+
+/* -------begin customization-------- */
+$theme-colors: (
+  primary: #bd4d94,
+  secondary: #d72060,
+  "dark": #201d1e,
+  "gray": #999999,
+  "gray-dark": #333333,
+  gray-0: #fafafa,
+  gray-00: #f6f6f6,
+  gray-1: #f0e9ed,
+  gray-2: #ebe1e6,
+  gray-3: #dddddd,
+  gray-4: #cccccc,
+  gray-5: #d6d6d6,
+  gray-6: #b0b0b0,
+  gray-7: #e5e5e5,
+  gray-8: #999999,
+  gray-9: #8f8f8f,
+  gray-10: #7e7e7e,
+  gray-11: #777777,
+  gray-12: #666666,
+  gray-13: #555555,
+  gray-14: #4b4b4b,
+  gray-15: #333333,
+  gray-16: #111111,
+  // not used
+  // blue: #007bff,
+  // indigo: #6610f2,
+  // purple: #6f42c1,
+  // pink: #e83e8c,
+  // red: #dc3545,
+  // orange: #fd7e14,
+  // yellow: #ffc107,
+  // green: #28a745,
+  // teal: #20c997,
+  // cyan: #17a2b8,
+  // white: #fff,
+  // success: #28a745,
+  // info: #17a2b8,
+  // warning: #ffc107,
+  // danger: #dc3545,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+);
+
+/* -------end customization-------- */ /* finally, import Bootstrap to set the changes! */
+@import "../custom-bootstrap.scss";

@@ -1,0 +1,507 @@
+// Raleway Thin
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+// Raleway ExtraLight
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+// Raleway Light
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Raleway Regular
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Raleway Medium
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Raleway SemiBold
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+// Raleway Bold
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Raleway ExtraBold
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+.font-size-56 {
+  font-size: 3.5rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-56 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-56 {
+    font-size: 2.95rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .font-size-56 {
+    font-size: 2.65rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .font-size-56 {
+    font-size: 2.51rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .font-size-56 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-size-56 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .font-size-56 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .font-size-56 {
+    font-size: 0.9rem;
+  }
+}
+
+.font-size-50 {
+  font-size: 3.125rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-50 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-50 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .font-size-50 {
+    font-size: 2.65rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .font-size-50 {
+    font-size: 2.51rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .font-size-50 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-size-50 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .font-size-50 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .font-size-50 {
+    font-size: 0.9rem;
+  }
+}
+
+.font-size-46 {
+  font-size: 2.875rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-46 {
+    font-size: 2.54rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-46 {
+    font-size: 2.32rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .font-size-46 {
+    font-size: 2.178rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .font-size-46 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .font-size-46 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-size-46 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .font-size-46 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .font-size-46 {
+    font-size: 0.6rem;
+  }
+}
+
+.font-size-40 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-40 {
+    font-size: 2.21rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .font-size-40 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .font-size-40 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .font-size-40 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .font-size-40 {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .font-size-40 {
+    font-size: 0.6rem;
+  }
+}
+
+.font-size-35 {
+  font-size: 2.1875rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-35 {
+    font-size: 1.94rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .font-size-35 {
+    font-size: 1.572rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .font-size-35 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .font-size-35 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .font-size-35 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-size-35 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .font-size-40 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .font-size-40 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-size-40 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .font-size-40 {
+    font-size: 0.8rem;
+  }
+}
+
+.font-size-30 {
+  font-size: 1.875rem;
+}
+.font-size-25 {
+  font-size: 1.5625rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-30 {
+    font-size: 1.5rem;
+  }
+  .font-size-25 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 1500px) {
+  .font-size-25 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .font-size-30 {
+    font-size: 1.25rem;
+  }
+  .font-size-25 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .font-size-30 {
+    font-size: 1.1rem;
+  }
+  .font-size-25 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .font-size-30 {
+    font-size: 1rem;
+  }
+  .font-size-25 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-size-30 {
+    font-size: 0.8rem;
+  }
+  .font-size-25 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .font-size-30 {
+    font-size: 0.6rem;
+  }
+  .font-size-25 {
+    font-size: 0.6rem;
+  }
+}
+
+.font-size-20 {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-20 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .font-size-20 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-20 {
+    font-size: 1rem;
+  }
+}
+
+.font-size-18 {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-18 {
+    font-size: 0.994rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .font-size-18 {
+    font-size: 0.947rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-18 {
+    font-size: 0.9rem;
+  }
+}
+
+.font-size-17 {
+  font-size: 1.0625rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-17 {
+    font-size: 0.94rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .font-size-17 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-17 {
+    font-size: 0.86rem;
+  }
+}
+
+.font-size-16 {
+  font-size: 1rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-16 {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .font-size-16 {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-16 {
+    font-size: 0.81rem;
+  }
+}
+
+.font-size-14 {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1680px) {
+  .font-size-14 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .font-size-14 {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 1536px) {
+  .font-size-14 {
+    font-size: 0.625rem;
+  }
+}
+@media (max-width: 900px) {
+  .font-size-14 {
+    font-size: 0.56rem;
+  }
+}
+@media (max-width: 600px) {
+  .font-size-14 {
+    font-size: 0.5rem;
+  }
+}
