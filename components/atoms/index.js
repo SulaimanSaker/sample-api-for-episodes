@@ -18,3 +18,5 @@ export { default as HorizentalLine } from "./horizental-line";
 export { default as New } from "./New";
 export { default as LoadingIndicator } from "./LoadingIndicator";
 export { default as CustomCheckBox } from "./custom-checkbox";
+export { default as CustomRadio } from "./custom-radio";
+export { default as CounterWithTitle } from "./counter-with-title";

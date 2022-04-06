@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Head from "next/head";
 
@@ -6,109 +7,138 @@ import styled from "styled-components";
 
 import AppTemplate from "components/templates/app";
 
-import {
-  Header,
-  Hero,
-  OurLittleHistory,
-  OurFeatures,
-  LatestArticles,
-  Advertisements,
-  Sales,
-  PlanYourEvent,
-  LatestEvents,
-  VideosCarousel,
-  Footer,
-} from "components/organisms";
+import { Header, Footer, ListWithFilters, ArticlesList } from "components/organisms";
 
-export const Styles = styled.div`
-  .home__our-little-history {
-  }
+import http from "services/http";
+import { GET_ALL_ARTICLES, GET_ALL_FILTERS, GET_ALL_WEB_ARTICLES } from "constants/endpoints";
 
-  .home__our-features {
-    margin-bottom: 4rem;
-    position: relative;
-  }
+export const Styles = styled.div``;
 
-  .home__latest-articles {
-    background-color: var(--gray-0);
-  }
+const defaultFilteringData = {
+  isIntial: true,
+  language: "en",
+  freeText: "",
+  pregnancyId: 1,
+  pageNumber: 1,
+  recordCount: 10,
+  sortBy: 2,
+  ageCategoryIds: [],
+  categoryIds: [],
+};
 
-  .home__advertisements {
-    padding-top: 4.5rem;
-    padding-bottom: 5rem;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    .wrapper {
-      width: 61.5%;
-      @media (max-width: 960px) {
-        width: 100%;
-      }
+const ArticlesPage = ({
+  articles: defaultArticles,
+  totalCount: defaultTotalCount,
+  filters,
+}) => {
+  const [articles, setArticles] = useState(defaultArticles);
+  const [filterFactors, setFilterFactors] = useState([]);
+
+  const [filteringData, setFilteringData] = useState({ ...defaultFilteringData });
+
+  const [totalCount, setTotalCount] = useState(defaultTotalCount);
+
+  const [buttonLoadingIndicator, setButtonLoadingIndicator] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (!filteringData.isIntial) {
+      setIsLoading(true);
+      let config = {
+        method: "post",
+        url: GET_ALL_WEB_ARTICLES,
+        data: filteringData,
+      };
+
+      http(config).then((res) => {
+        setArticles(res.data.content.data);
+        setTotalCount(res.data.content.totalCount);
+        setIsLoading(false);
+      });
     }
-  }
+  }, [filteringData]);
 
-  .home__plan-your-event {
-    background-color: var(--gray-0);
-    margin-top: 4rem;
-    padding-top: 4.5rem;
-    padding-bottom: 6.5rem;
-  }
+  const resetFilters = async () => {
+    setFilteringData({ ...defaultFilteringData });
+    setFilterFactors([]);
+  };
 
-  .home__latest-events {
-  }
+  const getNextPageData = () => {
+    setButtonLoadingIndicator(true);
+    let newFilteringData = {
+      ...filteringData,
+      pageNumber: filteringData.pageNumber + 1,
+      isIntial: false,
+    };
 
-  .home__videos-carousel {
-    margin-top: 4.5rem;
-    padding-bottom: 5rem;
-  }
-`;
+    let config = {
+      method: "post",
+      url: GET_ALL_WEB_ARTICLES,
+      data: newFilteringData,
+    };
 
-const HomePage = () => {
+    http(config).then((res) => {
+      setArticles((prev) => [...prev, ...res.data.content.data]);
+      setButtonLoadingIndicator(false);
+    });
+  };
+
   return (
-    <AppTemplate header={<Header />} hero={<Hero />} footer={<Footer />}>
+    <AppTemplate header={<Header />} footer={<Footer />}>
       <Head>
-        <title>Home | Double Beat</title>
+        <title>Episodes</title>
       </Head>
 
       <Styles>
         <main>
-          <div className="home__our-little-history">
-            <OurLittleHistory />
-          </div>
-
-          <div className="home__our-features">
-            <OurFeatures />
-          </div>
-
-          <div className="home__latest-articles">
-            <LatestArticles />
-          </div>
-
-          <div className="home__advertisements">
-            <div className="wrapper">
-              <Advertisements />
-            </div>
-          </div>
-
-          <div className="home__sales">
-            <Sales />
-          </div>
-
-          <div className="home__plan-your-event">
-            <PlanYourEvent />
-          </div>
-
-          <div className="home__latest-events">
-            <LatestEvents />
-          </div>
-
-          <div className="home__videos-carousel">
-            <VideosCarousel />
-          </div>
+          <ListWithFilters
+            filters={filters}
+            List={ArticlesList}
+            listData={articles}
+            setFilteringData={setFilteringData}
+            filteringData={filteringData}
+            setFilterFactors={setFilterFactors}
+            filterFactors={filterFactors}
+            resetFilters={resetFilters}
+            isLoading={isLoading}
+            totalCount={totalCount}
+            getNextPageData={getNextPageData}
+            buttonLoadingIndicator={buttonLoadingIndicator}
+          />
         </main>
       </Styles>
     </AppTemplate>
   );
 };
 
-export default HomePage;
+export async function getServerSideProps({ locale }) {
+  let config = {
+    method: "post",
+    url: GET_ALL_ARTICLES,
+    data: defaultFilteringData,
+  };
+
+  const articlesRes = await http(config);
+
+  config = {
+    method: "get",
+    url: GET_ALL_FILTERS,
+    params: {
+      language: locale,
+    },
+  };
+
+  const filtersRes = await http(config);
+
+  return {
+    props: {
+      articles: articlesRes.data.content.data,
+      totalCount: articlesRes.data.content.totalCount,
+      filters: filtersRes.data.content,
+
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+
+export default ArticlesPage;
